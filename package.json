@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "webpack serve --config webpack.dev.conf.js",
-    "build": "webpack --config webpack.prod.conf.js",
+    "serve": "set NODE_ENV=development&& webpack serve --config build/webpack.dev.conf.js",
+    "build": "set NODE_ENV=production&& webpack --config build/webpack.prod.conf.js",
     "lint": "eslint --ext .js,.vue src",
     "lintfix": "eslint --fix --ext .js,.vue src"
   },
@@ -33,7 +33,10 @@
     "html-webpack-plugin": "^4.5.1",
     "less": "^4.0.0",
     "less-loader": "^7.2.1",
+    "mini-css-extract-plugin": "^1.3.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
     "style-loader": "^2.0.0",
+    "stylus-loader": "^4.3.1",
     "url-loader": "^4.1.1",
     "vue-loader": "^15.9.6",
     "vue-style-loader": "^4.1.2",
