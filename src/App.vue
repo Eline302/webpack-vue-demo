@@ -1,6 +1,5 @@
 <template>
   <div id="app" >
-    <div class="apps" style="font-size:50px">webpack</div>
     <img alt="Vue logo" :src="logo">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -24,13 +23,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.apps {
+#app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background-color: red;
 }
 </style>

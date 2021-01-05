@@ -10,6 +10,8 @@ module.exports= merge(baseWebpackConfig ,{
     mode:'development',
     // devTool配置开发中的辅助工具，与source map相关的功能配置
     devtool:'eval-cheap-module-source-map',
+    //webpack5中热更新不触发，需要加上target:'web'就是将构建目标要设置为 web，具体配置参考https://webpack.js.org/configuration/target/#root
+    target:'web',
     // 专门为 webpack-dev-server 指定的配置选项, 开发阶段的配置
     devServer:{
         clientLogLevel: 'warning',

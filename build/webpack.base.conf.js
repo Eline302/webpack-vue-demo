@@ -97,14 +97,14 @@ module.exports={
             {
                 test: /\.css$/,
                 use: [
-                    devMode ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
+                    devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader'
                 ]
             },
             {
                 test: /\.styl(us)?$/,
                 use: [
-                    devMode ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
+                    devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader',
                     'stylus-loader']
             },
@@ -112,7 +112,7 @@ module.exports={
             {
                 test:/\.less$/,
                 use: [{
-                    loader: "vue-style-loader" 
+                    loader: "style-loader" 
                   }, {
                     loader: "css-loader"
                   }, {
