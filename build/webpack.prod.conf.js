@@ -9,14 +9,21 @@ const utils = require('./utils.js')
 module.exports = merge(baseWebpackConfig, {
   mode: 'production',
   devtool:false,
+  // 集中配置 webpack 内部的优化功能
   optimization: {
+    //输出结果中只导出外部使用的成员（未被引用的模块代码打包时候将会被移除） 
     usedExports:true,
+    // 压缩输出结果
     minimize:true,
+    // 尽可能将所有模块合并并输出到到一个函数中（提高运行效率，减少代码体积）
+    // concatenateModules: true,
+    // 实现公共模块提取
     splitChunks: {
       cacheGroups: {
         commons: {
-          test: /[\\/]node_modules[\\/]/,
+          test: /node_modules/,
           name: 'vendor',
+          // 自动提取所有公共模块到单独 bundle
           chunks: 'all'
         }
       }

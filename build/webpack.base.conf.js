@@ -94,6 +94,9 @@ module.exports={
             // production模式使用MiniCssExtractPlugin插件，将 CSS 代码从打包结果中提取出来的插件，通过这个插件，可以实现 CSS 的按需加载。
             // development 加打包在js文件中
             // 它会应用到普通的 `.css` 文件,以及 `.vue` 文件中的 `<style>` 块
+            // style-loader：将样式通过style标签形式注入
+            // MiniCssExtractPlugin.loader：样式文件通过link方式引入css
+            // 建议css文件体积超过150KB在提取到单个文件中
             {
                 test: /\.css$/,
                 use: [
