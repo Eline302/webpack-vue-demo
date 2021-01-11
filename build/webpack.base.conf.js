@@ -130,7 +130,7 @@ module.exports={
                     // 默认的错误提示方式
                     formatter: require('eslint-friendly-formatter') 
                 },
-                // 编译前检查
+                // 编译前检查(elint-loader优先级设置为最高)
                 enforce: 'pre', 
                 // 不检查的文件
                 exclude: /node_modules/,
