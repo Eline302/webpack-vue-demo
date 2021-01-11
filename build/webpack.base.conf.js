@@ -16,11 +16,11 @@ module.exports={
     resolve: {
         extensions: ['.js', '.vue', '.json'],
         alias: {
-          '@': utils.resolve('src'),
-          '@assets': utils.resolve('src/assets'),
-          '@pages': utils.resolve('src/pages'),
-          '@public': utils.resolve('public'),
-          '@components': utils.resolve('src/components')
+          '@': utils.resolve('../src'),
+          '@assets': utils.resolve('../src/assets'),
+          '@pages': utils.resolve('../src/pages'),
+          '@public': utils.resolve('../public'),
+          '@components': utils.resolve('../src/components')
         }
     },
     module:{
